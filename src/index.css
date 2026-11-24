@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #166534;
+  --color-primary-dark: #14532D;
+  --color-secondary: #22C55E;
+  --color-accent: #84CC16;
+  --color-bg-soft: #F7FAF7;
+  --color-surface: #FFFFFF;
+  --color-text-main: #17251B;
+  --color-text-muted: #64748B;
+  --color-warning: #F59E0B;
+  --color-danger: #DC2626;
+  --font-sans: "Inter", "Noto Sans Arabic", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  [dir="rtl"] {
+    font-family: "Noto Sans Arabic", "Inter", system-ui, sans-serif;
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    top: 4%;
+    opacity: 0.3;
+  }
+  50% {
+    top: 90%;
+    opacity: 1;
+  }
+  100% {
+    top: 4%;
+    opacity: 0.3;
+  }
+}
+
+.animate-scan-line {
+  animation: scan-line 2.1s ease-in-out infinite;
+}
